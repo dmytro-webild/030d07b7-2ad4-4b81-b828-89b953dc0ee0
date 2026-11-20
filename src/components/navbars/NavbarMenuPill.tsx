@@ -80,10 +80,10 @@ const NavbarMenuPill = ({
           </div>
         </a>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={contact?.href || "/retreats"}
-            className="hidden sm:inline-flex items-center justify-center min-h-[2.5rem] px-5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40"
+            className="inline-flex items-center justify-center min-h-[2.25rem] sm:min-h-[2.5rem] px-3.5 sm:px-5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40 shrink-0"
           >
             {contact?.text || "Book a Retreat"}
           </a>
@@ -145,9 +145,13 @@ const NavbarMenuPill = ({
                 initial={reduce ? false : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: EXPO_OUT, delay: 0.4 }}
-                className="mx-auto mt-auto flex w-[var(--container)] justify-between gap-[1rem] pt-[2rem] font-mono text-[length:var(--text-label)] uppercase"
+                className="mx-auto mt-auto flex w-[var(--container)] items-center justify-between gap-[1rem] pt-[2rem] font-mono text-[length:var(--text-label)] uppercase"
               >
-                <a href={contact.href} className="btn-link normal-case">
+                <a
+                  href={contact.href}
+                  onClick={() => setOpen(false)}
+                  className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40"
+                >
                   {contact.text}
                 </a>
                 <p className="text-muted-foreground">{brand}</p>
