@@ -8,7 +8,6 @@ export default function Layout() {
       <header data-webild-section="Header">
         <NavbarMenuPill
           brand="REVYVE"
-          logoSrc="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146001693-d4b3no21.webp"
           navItems={[
             {
               name: "Home",

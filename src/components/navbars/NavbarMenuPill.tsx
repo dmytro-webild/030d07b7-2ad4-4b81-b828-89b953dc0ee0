@@ -4,11 +4,12 @@ import { useRef, useState } from "react";
 import { AnimatePresence, animate, motion, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import useMenuDialog from "@/components/kit/useMenuDialog";
 
+import CloverLogo from "@/components/ui/CloverLogo";
+
 type NavItem = { name: string; href: string };
 
 type NavbarMenuPillProps = {
   brand?: string;
-  logoSrc?: string;
   mark?: string;
   navItems?: NavItem[];
   contact?: { text: string; href: string };
@@ -20,7 +21,6 @@ const EXPO_OUT = [0.19, 1, 0.22, 1] as const;
 
 const NavbarMenuPill = ({
   brand = "Ostra",
-  logoSrc,
   mark,
   navItems = [
     { name: "Studio", href: "#about" },
@@ -57,16 +57,7 @@ const NavbarMenuPill = ({
         className={`fixed inset-x-0 top-0 flex items-center justify-between py-[1.25rem] pl-[0.75rem] pr-[1.25rem] text-foreground lg:pl-[1.5rem] ${open ? "z-[56]" : "z-50"}`}
       >
         <a href="/" className="flex min-w-0 items-center gap-[0.625rem] group">
-          {logoSrc ? (
-            <img src={logoSrc} alt="REVYVE Logo" loading="eager" decoding="async" className="size-[2.25rem] object-contain rounded-full transition-transform duration-300 group-hover:scale-105" />
-          ) : (
-            <svg aria-hidden="true" viewBox="0 0 18 18" className="size-[1.125rem] shrink-0 fill-current">
-              <path d="M0 9a9 9 0 0 1 9-9v5.5A3.5 3.5 0 0 0 5.5 9Z" />
-              <path d="M9 0a9 9 0 0 1 9 9h-5.5A3.5 3.5 0 0 0 9 5.5Z" opacity="0.55" />
-              <path d="M18 9a9 9 0 0 1-9 9v-5.5A3.5 3.5 0 0 0 12.5 9Z" />
-              <path d="M9 18a9 9 0 0 1-9-9h5.5A3.5 3.5 0 0 0 9 12.5Z" opacity="0.55" />
-            </svg>
-          )}
+          <CloverLogo className="size-8 text-secondary shrink-0 transition-transform duration-300 group-hover:scale-110" />
           <div className="flex flex-col items-start leading-none">
             <p className="truncate font-serif text-[length:var(--text-body-lg)] font-medium tracking-tight text-foreground">{brand}</p>
             {mark ? <p className="text-[length:var(--text-label)] text-accent">{mark}</p> : <span className="text-[0.65rem] font-mono tracking-widest text-muted-foreground uppercase">Sanctuary</span>}

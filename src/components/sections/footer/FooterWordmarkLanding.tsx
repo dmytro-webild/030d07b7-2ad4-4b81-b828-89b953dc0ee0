@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import CloverLogo from "@/components/ui/CloverLogo";
 
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
@@ -56,7 +57,8 @@ export default function FooterWordmarkLanding({
   return (
     <footer aria-label={ariaLabel ?? "Footer"} className={cn("relative pb-[var(--gutter)] pt-[clamp(2.5rem,1.8rem+2.8vw,3rem)] text-foreground", className)}>
       <div className="kit-glass mx-auto flex w-[var(--container)] flex-col px-[1.375rem] pt-[1.375rem] lg:px-[clamp(2rem,3.5vw,3.5rem)] lg:pt-[clamp(2rem,3.5vw,3.5rem)]">
-        <div ref={rowRef} className="flex text-[length:var(--text-display)]">
+        <div ref={rowRef} className="flex items-center gap-4 text-[length:var(--text-display)]">
+          <CloverLogo className="size-[0.4em] text-secondary shrink-0" />
           <div ref={wordRef} aria-label={brand} role="img" className="flex w-max shrink-0 items-start">
             <p aria-hidden="true" className="whitespace-nowrap font-medium leading-[0.9] tracking-[-0.065em]">
               {brand}
