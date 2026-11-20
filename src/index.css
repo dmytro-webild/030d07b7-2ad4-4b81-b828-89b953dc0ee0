@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "./styles/animations.css";
 @import "./styles/masks.css";
@@ -10,15 +9,16 @@
 
 /* webild:theme-ai */
 :root {
-  --primary-cta: #1e3a2b; /* Forest Green */
-  --primary-cta-text: #faf7f2;
-  --secondary-cta: #e5aa24; /* Nature Yellow */
-  --secondary-cta-text: #1c201d; /* Charcoal */
+  --btn-hover: #f3efe8;
+  --primary-cta: #151210; /* Forest Green */
+  --primary-cta-text: #f3efe8;
+  --secondary-cta: #e8e2d8; /* Nature Yellow */
+  --secondary-cta-text: #151210; /* Charcoal */
   --background-accent: #8c5a3c; /* Warm Brown */
 
-  --background: #f7f4ee; /* Organic Cream */
-  --foreground: #1c201d; /* Deep Charcoal */
-  --card: #eae3d5; /* Warm Earthy Card */
+  --background: #f3efe8; /* Organic Cream */
+  --foreground: #151210; /* Deep Charcoal */
+  --card: #e8e2d8; /* Warm Earthy Card */
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
@@ -26,27 +26,27 @@
   --primary-foreground: var(--primary-cta-text);
   --secondary: var(--secondary-cta);
   --secondary-foreground: var(--secondary-cta-text);
-  --muted: #eae3d5;
-  --muted-foreground: #555f58;
-  --accent: #8c5a3c; /* Warm Brown */
-  --accent-foreground: #faf7f2;
-  --deep: #1e3a2b; /* Forest Green */
-  --deep-foreground: #dce8e1;
+  --muted: #e8e2d8;
+  --muted-foreground: #5e5750;
+  --accent: #c8161d; /* Warm Brown */
+  --accent-foreground: #ffffff;
+  --deep: #ece6dd; /* Forest Green */
+  --deep-foreground: #151210;
   --destructive: #e5484d;
   --destructive-foreground: #161616;
-  --border: #d2c7b5;
-  --input: #bcae9b;
+  --border: #d6cec2;
+  --input: #333333;
   --ring: var(--primary-cta);
-  --tint-1: #8c5a3c;
-  --tint-2: #1e3a2b;
-  --tint-3: #e5aa24;
+  --tint-1: #e9a29f;
+  --tint-2: #f0c6c0;
+  --tint-3: #f3d9d2;
   --glow: var(--secondary-cta);
   --glass: var(--background);
-  --accent-glass: color-mix(in srgb, var(--secondary-cta) 25%, var(--background));
-  --model-tone: dark;
+  --accent-glass: #c8161de8;
+  --model-tone: light;
 
-  --font-heading: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Instrument Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-label: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --heading-weight: 400;
   --heading-tracking: -0.045em;
@@ -130,14 +130,14 @@
     margin: 0;
     background-color: var(--background);
     color: var(--foreground);
-    font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: -0.01em;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Instrument Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: var(--heading-weight);
     letter-spacing: var(--heading-tracking);
     line-height: var(--heading-leading);
@@ -395,15 +395,15 @@
 [data-tone="deep"] {
   --background: var(--deep);
   --foreground: var(--deep-foreground);
-  --card: #274737;
+  --card: #e8e2d8;
   --card-foreground: var(--deep-foreground);
   --primary: var(--deep-foreground);
   --primary-foreground: var(--deep);
   --secondary: #e5aa24;
   --secondary-foreground: #1c201d;
-  --muted: #274737;
-  --muted-foreground: #9eb5a8;
-  --border: #3c614e;
+  --muted: #e8e2d8;
+  --muted-foreground: #5e5750;
+  --border: #d6cec2;
   --input: #4d7560;
   --ring: var(--deep-foreground);
   background-color: var(--background);
