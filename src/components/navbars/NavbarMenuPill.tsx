@@ -56,9 +56,9 @@ const NavbarMenuPill = ({
         style={{ y: open ? "0%" : y }}
         className={`fixed inset-x-0 top-0 flex items-center justify-between py-[1.25rem] pl-[0.75rem] pr-[1.25rem] text-foreground lg:pl-[1.5rem] ${open ? "z-[56]" : "z-50"}`}
       >
-        <a href="#" className="flex min-w-0 items-center gap-[0.375rem]">
+        <a href="/" className="flex min-w-0 items-center gap-[0.625rem] group">
           {logoSrc ? (
-            <img src={logoSrc} alt="" loading="eager" decoding="async" className="size-[1.125rem] object-contain" />
+            <img src={logoSrc} alt="REVYVE Logo" loading="eager" decoding="async" className="size-[2.25rem] object-contain rounded-full transition-transform duration-300 group-hover:scale-105" />
           ) : (
             <svg aria-hidden="true" viewBox="0 0 18 18" className="size-[1.125rem] shrink-0 fill-current">
               <path d="M0 9a9 9 0 0 1 9-9v5.5A3.5 3.5 0 0 0 5.5 9Z" />
@@ -67,28 +67,37 @@ const NavbarMenuPill = ({
               <path d="M9 18a9 9 0 0 1-9-9h5.5A3.5 3.5 0 0 0 9 12.5Z" opacity="0.55" />
             </svg>
           )}
-          <div className="flex items-start">
-            <p className="truncate text-[length:var(--text-body)] leading-[1.5] tracking-[-0.025em]">{brand}</p>
-            {mark && <p className="text-[length:var(--text-label)] leading-none text-accent">{mark}</p>}
+          <div className="flex flex-col items-start leading-none">
+            <p className="truncate font-serif text-[length:var(--text-body-lg)] font-medium tracking-tight text-foreground">{brand}</p>
+            {mark ? <p className="text-[length:var(--text-label)] text-accent">{mark}</p> : <span className="text-[0.65rem] font-mono tracking-widest text-muted-foreground uppercase">Sanctuary</span>}
           </div>
         </a>
 
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-label={open ? closeText : menuText}
-          onClick={() => setOpen((value) => !value)}
-          className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-foreground px-[1.0625rem] transition-colors duration-300 hover:bg-foreground hover:text-background"
-        >
-          <div aria-hidden="true" className="grid font-mono text-[length:var(--text-label)] uppercase leading-none">
-            <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`}>{menuText}</p>
-            <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>{closeText}</p>
-          </div>
-          <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem]">
-            <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 rotate-45" : "top-0"}`} />
-            <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 -rotate-45" : "bottom-0"}`} />
-          </div>
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href={contact?.href || "/retreats"}
+            className="hidden sm:inline-flex items-center justify-center min-h-[2.5rem] px-5 rounded-full bg-accent text-accent-foreground font-mono text-[0.7rem] font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-foreground hover:text-background shadow-sm"
+          >
+            {contact?.text || "Book a Retreat"}
+          </a>
+
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-label={open ? closeText : menuText}
+            onClick={() => setOpen((value) => !value)}
+            className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-foreground/30 px-[1.0625rem] bg-background/80 backdrop-blur-md transition-colors duration-300 hover:bg-foreground hover:text-background"
+          >
+            <div aria-hidden="true" className="grid font-mono text-[length:var(--text-label)] uppercase leading-none">
+              <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`}>{menuText}</p>
+              <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>{closeText}</p>
+            </div>
+            <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem]">
+              <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 rotate-45" : "top-0"}`} />
+              <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 -rotate-45" : "bottom-0"}`} />
+            </div>
+          </button>
+        </div>
       </motion.nav>
 
       <AnimatePresence>
