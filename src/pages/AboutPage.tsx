@@ -39,28 +39,28 @@ export default function AboutPage() {
               title: "Sacred",
               category: "Ancient Geometry",
               description: "Every structure at REVYVE is aligned to foster balance, harmony, and transformative personal power.",
-              imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg?_wi=2",
               imageAlt: "REVYVE sacred forest sanctuary"
             },
             {
               title: "Movement",
               category: "Somatic Healing",
               description: "Guided somatic yoga and breathwork sessions to release stored stress and ground into body wisdom.",
-              imageSrc: "https://img.b2bpic.net/free-photo/nice-leaves-aspen_23-2147829156.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/nice-leaves-aspen_23-2147829156.jpg?_wi=2",
               imageAlt: "sunlight in Hocking Hills leaves"
             },
             {
               title: "Sanctuary",
               category: "Curated Design",
               description: "Intentionally designed cabins crafted by Julie Brainard blending organic cedar, stone, and forest views.",
-              imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg?_wi=3",
               imageAlt: "mossy tree trunk in Hocking Hills forest"
             },
             {
               title: "Nourish",
               category: "Collective Spirit",
               description: "Gatherings, fire circles, and mindful nourishment designed to mend and rejuvenate.",
-              imageSrc: "https://img.b2bpic.net/free-photo/autumn-forest-reflected-lake_181624-52280.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/autumn-forest-reflected-lake_181624-52280.jpg?_wi=2",
               imageAlt: "serene autumn forest reflection"
             }
           ]}
