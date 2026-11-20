@@ -10,8 +10,8 @@ export default function RetreatsPage() {
       <section className="relative pt-[clamp(7rem,16svh,10rem)] pb-12 text-foreground">
         <div className="mx-auto w-[var(--container)]">
           <div className="flex flex-col items-start max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent font-semibold mb-3">
-              Retreat Immersions & Offerings
+            <span className="font-mono text-xs uppercase tracking-widest text-secondary font-semibold mb-3">
+              Retreat Immersions & Waitlist
             </span>
             <h1 className="font-serif text-[length:var(--text-h1)] leading-none tracking-tight mb-6">
               Transformative Retreats in Hocking Hills
@@ -26,94 +26,94 @@ export default function RetreatsPage() {
       {/* The 6 Core Offerings Section */}
       <OfferingsSection />
 
-      {/* Upcoming Retreat Pricing & Booking Cards */}
+      {/* Upcoming Retreat Early Access & Waitlist Section */}
       <div id="pricing" className="relative z-[45]">
         <PricingScopeColumns
-          tag="Upcoming Immersion Immersions"
-          title="Reserve Your Retreat Experience"
-          description="Intimate group retreats held at our Hocking Hills sanctuary. All meals, somatic sessions, and lodging included."
+          tag="Upcoming Immersions"
+          title="Retreat Dates Coming Soon"
+          description="We are curating our upcoming season of intimate somatic retreats and sanctuary resets in Hocking Hills. Specific retreat dates are coming soon—get on the list now for early access and priority booking."
           items={[
             {
-              title: "Summer Somatic",
-              description: "Immersion & Nervous System Reset",
-              price: "$850",
-              period: "per guest",
+              title: "Summer & Fall Immersions",
+              description: "Somatic Movement & Nervous System Resets",
+              price: "Dates Coming Soon",
+              period: "Early Access Waitlist Open",
               specs: [
                 {
-                  label: "Duration",
-                  value: "3 Days, 2 Nights"
-                },
-                {
                   label: "Practices",
-                  value: "Somatic Yoga & Breathwork"
+                  value: "Somatic Yoga, Breathwork & Sound Baths"
                 },
                 {
                   label: "Lodging",
-                  value: "Sanctuary Cabin included"
+                  value: "Sanctuary Cabins, Treehouse & A-Frames"
                 },
                 {
                   label: "Nourishment",
-                  value: "Organic farm-to-table dining"
+                  value: "Organic farm-to-table dining included"
+                },
+                {
+                  label: "Waitlist Perk",
+                  value: "First priority cabin selection & early bird window"
                 }
               ],
               button: {
-                text: "Book a Retreat",
+                text: "Join Early Access Waitlist",
                 href: "#book"
               }
             },
             {
-              title: "Autumn Release",
-              description: "Deep Rest & Forest Bathing Intensive",
-              price: "$1,200",
-              period: "per guest",
+              title: "Winter & Spring Resets",
+              description: "Deep Rest & Sacred Fireplace Journeys",
+              price: "Dates Coming Soon",
+              period: "Early Access Waitlist Open",
               specs: [
                 {
-                  label: "Duration",
-                  value: "5 Days, 4 Nights"
-                },
-                {
                   label: "Practices",
-                  value: "Sound Bath & Shinrin-Yoku"
+                  value: "Shinrin-Yoku, Fire Circles & Breathwork"
                 },
                 {
                   label: "Lodging",
-                  value: "Treehouse or A-Frame loft"
+                  value: "Luxury Timber Suites & Heated Cabins"
                 },
                 {
                   label: "Nourishment",
-                  value: "All organic meals & tea bar"
+                  value: "Warm herbal dining, teas & elixirs"
+                },
+                {
+                  label: "Waitlist Perk",
+                  value: "Direct VIP email invitation prior to public launch"
                 }
               ],
               button: {
-                text: "Book a Retreat",
+                text: "Join Early Access Waitlist",
                 href: "#book"
               }
             },
             {
-              title: "Winter Renewal",
-              description: "Quiet Reflection & Sacred Fire Weekend",
-              price: "$600",
-              period: "per guest",
+              title: "Private Group Retreats",
+              description: "Bespoke Gatherings & Sacred Circles",
+              price: "Inquire For Dates",
+              period: "Custom Booking Available",
               specs: [
                 {
-                  label: "Duration",
-                  value: "2 Days, 1 Night"
+                  label: "Capacity",
+                  value: "Intimate groups of 6 to 16 guests"
                 },
                 {
-                  label: "Practices",
-                  value: "Breathwork & Silent DJ Journey"
+                  label: "Customization",
+                  value: "Tailored movement, meals & sound sessions"
                 },
                 {
-                  label: "Lodging",
-                  value: "Boutique timber suite"
+                  label: "Exclusive Access",
+                  value: "Full private reservation of sanctuary grounds"
                 },
                 {
-                  label: "Nourishment",
-                  value: "Warm herbal dining & elixirs"
+                  label: "Booking Status",
+                  value: "Now accepting custom group inquiries"
                 }
               ],
               button: {
-                text: "Book a Retreat",
+                text: "Inquire For Private Group",
                 href: "#book"
               }
             }
@@ -121,10 +121,10 @@ export default function RetreatsPage() {
         />
       </div>
 
-      {/* Retreat Booking Form */}
+      {/* Early Access Waitlist Form */}
       <div id="book" className="relative z-[45]">
         <ContactUnderlineForm
-          title="Book Your Retreat Spot"
+          title="Get On The Early Access List"
           fields={[
             {
               name: "name",
@@ -147,30 +147,29 @@ export default function RetreatsPage() {
             },
             {
               name: "message",
-              label: "Retreat Interests & Requirements",
+              label: "Retreat Preferences & Questions",
               type: "textarea",
-              placeholder: "Please share which retreat immersion you wish to attend or any dietary/lodging preferences.",
+              placeholder: "Let us know which season you are interested in or if you have any questions about our retreat offerings.",
               required: true
             }
           ]}
-          servicesLabel="Select Offering"
+          servicesLabel="Select Preferred Season"
           services={[
-            "Summer Somatic Immersion",
-            "Autumn Release Intensive",
-            "Winter Renewal Weekend",
-            "Corporate Wellness",
-            "Private Breathwork Session"
+            "Summer & Fall Immersions (Waitlist)",
+            "Winter & Spring Resets (Waitlist)",
+            "Private Group Retreat Inquiry",
+            "General Early Access Updates"
           ]}
           button={{
-            text: "Submit Retreat Booking Request"
+            text: "Join Early Access Waitlist"
           }}
         />
       </div>
 
       {/* Email Signup Form */}
       <EmailSignupSection
-        title="Join the REVYVE Journey"
-        subtitle="Subscribe for upcoming retreat date announcements, somatic practices, and early registration discounts."
+        title="Be The First To Know"
+        subtitle="Subscribe to receive instant notifications when new retreat dates and registration windows open."
       />
     </>
   );

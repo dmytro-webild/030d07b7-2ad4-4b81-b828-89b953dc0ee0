@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
+import CloverLogo from "@/components/ui/CloverLogo";
 
 export default function SriYantraPhilosophy() {
   return (
     <section className="relative py-[clamp(4rem,7vw,6.5rem)] text-foreground overflow-hidden">
       <div className="mx-auto w-[var(--container)]">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-          {/* Logo Graphic Showcase */}
+          {/* Four-Leaf Clover Logo Graphic Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -13,17 +14,13 @@ export default function SriYantraPhilosophy() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex justify-center"
           >
-            <div className="relative group p-6 sm:p-10 rounded-full bg-gradient-to-tr from-card/80 via-accent/15 to-card/40 border border-border shadow-2xl">
-              <div className="absolute inset-0 rounded-full bg-accent/10 blur-2xl group-hover:bg-accent/20 transition-all duration-700" />
-              <img
-                src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146001693-d4b3no21.webp"
-                alt="REVYVE Sri Yantra Sacred Geometry Logo"
-                className="relative z-10 size-64 sm:size-80 object-contain drop-shadow-xl"
-              />
+            <div className="relative group p-10 sm:p-14 rounded-full bg-gradient-to-tr from-card/90 via-accent/20 to-card/50 border border-border/80 shadow-2xl flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full bg-secondary/20 blur-3xl group-hover:bg-secondary/30 transition-all duration-700" />
+              <CloverLogo className="relative z-10 size-48 sm:size-64 text-secondary drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" />
             </div>
           </motion.div>
 
-          {/* Philosophy Text Content */}
+          {/* Sacred Philosophy Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -31,23 +28,23 @@ export default function SriYantraPhilosophy() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-7 flex flex-col items-start"
           >
-            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-accent-foreground bg-accent/30 px-3 py-1 rounded-full mb-4">
-              <span>Sacred Geometry & Guidance</span>
+            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-secondary-foreground bg-secondary/30 px-3.5 py-1.5 rounded-full mb-4 border border-secondary/40 font-semibold">
+              <span>Sacred Geometry & Natural Harmony</span>
             </div>
 
             <h2 className="font-serif text-[length:var(--text-h2)] leading-none tracking-tight mb-6">
-              Our Sri Yantra Philosophy
+              Our Sacred Four-Leaf Clover Philosophy
             </h2>
 
             <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-4">
               <p className="text-base sm:text-lg">
-                At <strong className="text-foreground font-serif">REVYVE</strong>, our philosophy is birthed from our logo of the <strong className="text-foreground">Sri Yantra</strong>. It is deeply rooted in its profound spiritual symbolism. Derived from ancient Hindu and Vedic traditions, the Sri Yantra is a sacred geometric pattern believed to harbor immense spiritual power.
+                At <strong className="text-foreground font-serif">REVYVE</strong>, our philosophy is birthed from our emblem of the <strong className="text-foreground">Four-Leaf Clover & Sacred Geometry</strong>. It is deeply rooted in profound spiritual symbolism and natural alignment.
               </p>
               <p className="text-base sm:text-lg">
-                As the embodiment of divine energy, it is thought to usher in good health, prosperity, and success. The intricate design, representing the alignment of nine planets, holds the key to unlocking balance and harmony in one's life.
+                As the embodiment of divine energy, renewal, and fortune, the four petals represent the harmony of mind, body, spirit, and nature. It invites good health, prosperity, and alignment across all facets of life.
               </p>
               <p className="text-base sm:text-lg">
-                At the core of our retreat center's philosophy lies in enhancing personal power and inviting good fortune and success across all facets of life. The Sri Yantra serves as a guiding symbol, aligning with our commitment to create a space where individuals can experience holistic well-being, abundance, and transformative energy.
+                At the core of our retreat sanctuary lies the mission to enhance personal power and foster transformative energy. The four-leaf clover serves as our guiding star, creating a haven where guests experience holistic well-being and peaceful abundance.
               </p>
             </div>
 

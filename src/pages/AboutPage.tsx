@@ -39,8 +39,8 @@ export default function AboutPage() {
               title: "Sacred",
               category: "Ancient Geometry",
               description: "Every structure at REVYVE is aligned to foster balance, harmony, and transformative personal power.",
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146001693-d4b3no21.webp",
-              imageAlt: "REVYVE Sri Yantra emblem"
+              imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg",
+              imageAlt: "REVYVE sacred forest sanctuary"
             },
             {
               title: "Movement",
