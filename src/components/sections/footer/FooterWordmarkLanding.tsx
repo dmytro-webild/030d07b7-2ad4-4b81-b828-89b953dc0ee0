@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import CloverLogo from "@/components/ui/CloverLogo";
 
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
@@ -59,11 +58,10 @@ export default function FooterWordmarkLanding({
       <div className="mx-auto flex w-[var(--container)] flex-col px-[1.375rem] pt-[1.375rem] lg:px-[clamp(2rem,3.5vw,3.5rem)] lg:pt-[clamp(2rem,3.5vw,3.5rem)] bg-[#1c201d] border border-[#1e3a2b]/80 rounded-3xl shadow-2xl">
         <div ref={rowRef} className="flex items-center gap-4 text-[length:var(--text-display)]">
           <div className="flex items-center gap-2 shrink-0">
-            <CloverLogo className="size-[0.4em] text-[#e5aa24] shrink-0 filter drop-shadow-[0_2px_10px_rgba(229,170,36,0.5)]" />
-            <div className="relative size-[0.38em] rounded-full overflow-hidden border border-[#e5aa24]/60 shadow-lg">
+            <div className="relative size-[0.42em] rounded-full overflow-hidden border border-[#e5aa24]/60 shadow-lg">
               <img
                 src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
-                alt="REVYVE Black Spinning Star Sri Yantra Logo"
+                alt="REVYVE Sri Yantra Logo"
                 className="size-full object-cover animate-[spin_12s_linear_infinite]"
               />
             </div>
@@ -98,7 +96,7 @@ export default function FooterWordmarkLanding({
         <div className="mt-[clamp(1.5rem,1.2rem+1.2vw,2.25rem)] grid grid-cols-1 gap-[8px] border-t border-[#1e3a2b] py-[28px] font-mono text-[length:var(--text-label)] uppercase leading-[1.5] text-[#d2c7b5] lg:grid-cols-3 lg:items-center">
           <div className="flex items-center gap-2">
             <span className="size-2 rounded-full bg-[#e5aa24]" />
-            <span className="text-xs text-[#e5aa24]">Yellow Clover & Spinning Star Sanctuary</span>
+            <span className="text-xs text-[#e5aa24]">Sri Yantra Sanctuary</span>
           </div>
           {tagline && <p className="text-balance lg:text-center text-[#d2c7b5]">{tagline}</p>}
           {copyright && <p className="whitespace-nowrap lg:text-right text-[#8c5a3c]">{copyright}</p>}
