@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function CloverLogo({ className = "size-8 text-[#e5aa24]", ...props }: SVGProps<SVGSVGElement>) {
+export default function CloverLogo({ className = "size-8 text-[#f4d35e]", ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 100 100"

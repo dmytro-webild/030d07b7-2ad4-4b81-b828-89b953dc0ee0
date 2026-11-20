@@ -54,9 +54,9 @@ const NavbarMenuPill = ({
         style={{ y: open ? "0%" : y }}
         className={`fixed inset-x-0 top-0 flex items-center justify-between py-[1.25rem] pl-[0.75rem] pr-[1.25rem] text-foreground lg:pl-[1.5rem] ${open ? "z-[56]" : "z-50"}`}
       >
-        <a href="/" className="flex min-w-0 items-center gap-[0.75rem] group bg-[#1c201d]/85 backdrop-blur-md px-3.5 py-2 rounded-full border border-[#1e3a2b]/60 shadow-lg transition-all duration-300 hover:border-[#e5aa24]/60">
+        <a href="/" className="flex min-w-0 items-center gap-[0.75rem] group bg-[#1c201d]/85 backdrop-blur-md px-3.5 py-2 rounded-full border border-[#2e5440]/60 shadow-lg transition-all duration-300 hover:border-[#f4d35e]/60">
           <div className="relative size-8 shrink-0 flex items-center justify-center">
-            <div className="relative size-8 rounded-full overflow-hidden border border-[#e5aa24]/70 shadow-[0_0_12px_rgba(229,170,36,0.35)] transition-transform duration-300 group-hover:scale-110">
+            <div className="relative size-8 rounded-full overflow-hidden border border-[#f4d35e]/70 shadow-[0_0_12px_rgba(244,211,94,0.35)] transition-transform duration-300 group-hover:scale-110">
               <img
                 src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
                 alt="REVYVE Sri Yantra Logo"
@@ -68,12 +68,12 @@ const NavbarMenuPill = ({
           <div className="flex flex-col items-start leading-none pr-1">
             <div className="flex items-center gap-1.5">
               <p className="truncate font-serif text-[length:var(--text-body-lg)] font-bold tracking-tight text-[#faf7f2]">{brand}</p>
-              <span className="inline-block size-1.5 rounded-full bg-[#e5aa24]" />
+              <span className="inline-block size-1.5 rounded-full bg-[#f4d35e]" />
             </div>
             {mark ? (
-              <p className="text-[length:var(--text-label)] text-[#e5aa24] font-semibold">{mark}</p>
+              <p className="text-[length:var(--text-label)] text-[#f4d35e] font-semibold">{mark}</p>
             ) : (
-              <span className="text-[0.65rem] font-mono tracking-widest text-[#8c5a3c] font-semibold uppercase">
+              <span className="text-[0.65rem] font-mono tracking-widest text-[#9c6849] font-semibold uppercase">
                 Sri Yantra Sanctuary
               </span>
             )}
@@ -83,7 +83,7 @@ const NavbarMenuPill = ({
         <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={contact?.href || "/retreats"}
-            className="inline-flex items-center justify-center min-h-[2.25rem] sm:min-h-[2.5rem] px-3.5 sm:px-5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40 shrink-0"
+            className="inline-flex items-center justify-center min-h-[2.25rem] sm:min-h-[2.5rem] px-3.5 sm:px-5 rounded-full bg-[#f4d35e] text-[#1c201d] font-mono text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#2e5440] hover:text-[#faf7f2] shadow-md border border-[#f4d35e]/40 shrink-0"
           >
             {contact?.text || "Book a Retreat"}
           </a>
@@ -93,13 +93,13 @@ const NavbarMenuPill = ({
             aria-expanded={open}
             aria-label={open ? closeText : menuText}
             onClick={() => setOpen((value) => !value)}
-            className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-[#e5aa24]/40 px-[1.0625rem] bg-[#1e3a2b]/90 text-[#faf7f2] backdrop-blur-md transition-colors duration-300 hover:bg-[#8c5a3c] hover:text-[#faf7f2] shadow-md"
+            className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-[#f4d35e]/40 px-[1.0625rem] bg-[#2e5440]/90 text-[#faf7f2] backdrop-blur-md transition-colors duration-300 hover:bg-[#9c6849] hover:text-[#faf7f2] shadow-md"
           >
             <div aria-hidden="true" className="grid font-mono text-[length:var(--text-label)] uppercase leading-none font-semibold">
               <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`}>{menuText}</p>
               <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>{closeText}</p>
             </div>
-            <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem] text-[#e5aa24]">
+            <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem] text-[#f4d35e]">
               <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 rotate-45" : "top-0"}`} />
               <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 -rotate-45" : "bottom-0"}`} />
             </div>
@@ -150,7 +150,7 @@ const NavbarMenuPill = ({
                 <a
                   href={contact.href}
                   onClick={() => setOpen(false)}
-                  className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40"
+                  className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#f4d35e] text-[#1c201d] font-mono text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#2e5440] hover:text-[#faf7f2] shadow-md border border-[#f4d35e]/40"
                 >
                   {contact.text}
                 </a>

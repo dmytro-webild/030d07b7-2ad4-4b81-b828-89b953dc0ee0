@@ -59,8 +59,8 @@ export default function OfferingsSection() {
       <div className="mx-auto w-[var(--container)]">
         {/* Header */}
         <div className="flex flex-col items-start mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-[#faf7f2] bg-[#1e3a2b] border border-[#e5aa24]/50 px-4 py-1.5 rounded-full mb-3 shadow-sm font-bold">
-            <span className="size-2 rounded-full bg-[#e5aa24]" />
+          <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-[#faf7f2] bg-[#2e5440] border border-[#f4d35e]/50 px-4 py-1.5 rounded-full mb-3 shadow-sm font-bold">
+            <span className="size-2 rounded-full bg-[#f4d35e]" />
             <span>REVYVE Sanctuary Offerings</span>
           </div>
 
@@ -68,7 +68,7 @@ export default function OfferingsSection() {
             Sacred Experiences & Gatherings
           </h2>
 
-          <p className="text-[#8c5a3c] text-base sm:text-lg max-w-2xl leading-relaxed font-serif font-medium">
+          <p className="text-[#9c6849] text-base sm:text-lg max-w-2xl leading-relaxed font-serif font-medium">
             Every offering at REVYVE is designed to nurture personal alignment, invite transformative energy, and foster joyful connection in Hocking Hills.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function OfferingsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-[#1e3a2b]/30 bg-[#eae3d5]/90 backdrop-blur-md transition-all duration-500 hover:border-[#e5aa24] hover:shadow-2xl hover:-translate-y-1"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-[#2e5440]/30 bg-[#eae3d5]/90 backdrop-blur-md transition-all duration-500 hover:border-[#f4d35e] hover:shadow-2xl hover:-translate-y-1"
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
@@ -92,18 +92,18 @@ export default function OfferingsSection() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c201d]/80 via-[#1c201d]/20 to-transparent" />
-                <span className="absolute top-4 left-4 font-mono text-[0.65rem] uppercase tracking-widest bg-[#1c201d]/90 backdrop-blur-md px-3 py-1 rounded-full text-[#e5aa24] border border-[#e5aa24]/50 font-bold">
+                <span className="absolute top-4 left-4 font-mono text-[0.65rem] uppercase tracking-widest bg-[#1c201d]/90 backdrop-blur-md px-3 py-1 rounded-full text-[#f4d35e] border border-[#f4d35e]/50 font-bold">
                   {item.tag}
                 </span>
               </div>
 
               {/* Content */}
               <div className="flex flex-1 flex-col p-6 sm:p-7">
-                <span className="font-mono text-xs uppercase tracking-wider text-[#8c5a3c] font-bold mb-1">
+                <span className="font-mono text-xs uppercase tracking-wider text-[#9c6849] font-bold mb-1">
                   {item.category}
                 </span>
 
-                <h3 className="font-serif text-2xl font-bold tracking-tight mb-3 text-[#1c201d] group-hover:text-[#1e3a2b] transition-colors">
+                <h3 className="font-serif text-2xl font-bold tracking-tight mb-3 text-[#1c201d] group-hover:text-[#2e5440] transition-colors">
                   {item.title}
                 </h3>
 
@@ -111,14 +111,14 @@ export default function OfferingsSection() {
                   {item.description}
                 </p>
 
-                <div className="pt-4 border-t border-[#1e3a2b]/20 flex items-center justify-between">
+                <div className="pt-4 border-t border-[#2e5440]/20 flex items-center justify-between">
                   <a
                     href="/retreats"
-                    className="btn-link text-xs uppercase tracking-wider font-mono font-bold text-[#1e3a2b] hover:text-[#8c5a3c]"
+                    className="btn-link text-xs uppercase tracking-wider font-mono font-bold text-[#2e5440] hover:text-[#9c6849]"
                   >
                     Explore Offering
                   </a>
-                  <span className="size-2 rounded-full bg-[#e5aa24] group-hover:scale-150 transition-all shadow-[0_0_8px_rgba(229,170,36,0.8)]" />
+                  <span className="size-2 rounded-full bg-[#f4d35e] group-hover:scale-150 transition-all shadow-[0_0_8px_rgba(244,211,94,0.8)]" />
                 </div>
               </div>
             </motion.div>
