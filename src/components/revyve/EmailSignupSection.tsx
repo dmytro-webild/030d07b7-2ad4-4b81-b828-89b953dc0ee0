@@ -24,21 +24,21 @@ export default function EmailSignupSection({
   return (
     <section className={`relative py-[clamp(3.5rem,6vw,5.5rem)] text-foreground ${className}`}>
       <div className="mx-auto w-[var(--container)]">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-card via-card/90 to-accent/20 border border-border/80 p-8 sm:p-12 md:p-16 text-center shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1e3a2b] via-[#1c201d] to-[#8c5a3c] border border-[#e5aa24]/50 p-8 sm:p-12 md:p-16 text-center shadow-2xl text-[#faf7f2]">
           {/* Subtle background glow */}
-          <div className="pointer-events-none absolute -top-24 -left-24 size-72 rounded-full bg-accent/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -right-24 size-72 rounded-full bg-secondary/30 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -left-24 size-72 rounded-full bg-[#e5aa24]/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -right-24 size-72 rounded-full bg-[#8c5a3c]/30 blur-3xl" />
 
           <div className="relative z-10 mx-auto max-w-2xl flex flex-col items-center">
-            <span className="font-mono text-[0.7rem] uppercase tracking-widest text-muted-foreground mb-3">
+            <span className="font-mono text-[0.7rem] uppercase tracking-widest text-[#e5aa24] bg-[#e5aa24]/10 border border-[#e5aa24]/30 px-3.5 py-1 rounded-full mb-3 font-bold">
               Inner Circle • Hocking Hills, OH
             </span>
 
-            <h2 className="font-serif text-[length:var(--text-h2)] leading-tight tracking-tight mb-4">
+            <h2 className="font-serif text-[length:var(--text-h2)] leading-tight tracking-tight mb-4 text-[#faf7f2]">
               {title}
             </h2>
 
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+            <p className="text-[#d2c7b5] text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
               {subtitle}
             </p>
 
@@ -46,13 +46,13 @@ export default function EmailSignupSection({
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="w-full max-w-md rounded-2xl bg-accent/20 border border-accent/40 p-5 text-center"
+                className="w-full max-w-md rounded-2xl bg-[#1e3a2b] border border-[#e5aa24]/50 p-5 text-center text-[#faf7f2]"
               >
-                <p className="font-serif text-xl font-medium mb-1 text-foreground">
+                <p className="font-serif text-xl font-bold mb-1 text-[#e5aa24]">
                   Welcome to the REVYVE Community!
                 </p>
-                <p className="text-xs text-muted-foreground">
-                  We've reserved a special place for you. Look out for updates at <span className="font-mono text-foreground">{email}</span>.
+                <p className="text-xs text-[#d2c7b5]">
+                  We've reserved a special place for you. Look out for updates at <span className="font-mono text-[#faf7f2] font-semibold">{email}</span>.
                 </p>
               </motion.div>
             ) : (
@@ -63,18 +63,18 @@ export default function EmailSignupSection({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="flex-1 rounded-full border border-border bg-background/80 backdrop-blur-sm px-6 py-3.5 text-sm placeholder:text-muted-foreground outline-none focus:border-foreground transition-colors"
+                  className="flex-1 rounded-full border border-[#e5aa24]/40 bg-[#1c201d]/90 text-[#faf7f2] backdrop-blur-sm px-6 py-3.5 text-sm placeholder:text-[#d2c7b5]/60 outline-none focus:border-[#e5aa24] transition-colors"
                 />
                 <button
                   type="submit"
-                  className="rounded-full bg-primary text-primary-foreground py-3.5 px-8 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 shrink-0 shadow-md"
+                  className="rounded-full bg-[#e5aa24] text-[#1c201d] py-3.5 px-8 font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#faf7f2] hover:text-[#1e3a2b] transition-all duration-300 shrink-0 shadow-lg"
                 >
                   Join Now
                 </button>
               </form>
             )}
 
-            <p className="mt-4 font-mono text-[0.65rem] text-muted-foreground uppercase tracking-wider">
+            <p className="mt-4 font-mono text-[0.65rem] text-[#d2c7b5] uppercase tracking-wider">
               No spam. Only intentional invitations & somatic wellness wisdom.
             </p>
           </div>

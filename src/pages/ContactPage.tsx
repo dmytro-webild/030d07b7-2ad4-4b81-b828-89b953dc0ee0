@@ -9,7 +9,8 @@ export default function ContactPage() {
         <div className="mx-auto w-[var(--container)]">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7 flex flex-col items-start">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-semibold mb-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#faf7f2] bg-[#1e3a2b] border border-[#e5aa24]/50 px-4 py-1.5 rounded-full mb-3 font-bold shadow-md inline-flex items-center gap-2">
+                <span className="size-2 rounded-full bg-[#e5aa24]" />
                 Get in Touch
               </span>
               <h1 className="font-serif text-[length:var(--text-h1)] leading-none tracking-tight mb-6">

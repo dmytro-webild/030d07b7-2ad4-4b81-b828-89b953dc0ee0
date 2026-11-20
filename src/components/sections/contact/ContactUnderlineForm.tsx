@@ -102,7 +102,7 @@ const ContactUnderlineForm = ({
                 transition={{ duration: slow * 0.5, ease }}
                 className="flex flex-col gap-[1rem]"
               >
-                <legend className="mb-[1rem] text-[length:var(--text-body-lg)] leading-[1.2] tracking-[-0.03em]">{servicesLabel}</legend>
+                <legend className="mb-[1rem] text-[length:var(--text-body-lg)] leading-[1.2] tracking-[-0.03em] font-serif font-bold text-[#1c201d]">{servicesLabel}</legend>
                 <div className="flex flex-wrap gap-[0.5rem]">
                   {services.map((service, i) => (
                     <button
@@ -111,8 +111,8 @@ const ContactUnderlineForm = ({
                       aria-pressed={active === i}
                       onClick={() => setActive(i)}
                       className={cn(
-                        "min-h-[2.75rem] whitespace-nowrap border px-[0.875rem] font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] transition-colors",
-                        active === i ? "border-accent text-foreground" : "border-input text-muted-foreground hover:border-foreground hover:text-foreground",
+                        "min-h-[2.75rem] whitespace-nowrap rounded-full border px-[1.25rem] font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] font-bold transition-all",
+                        active === i ? "border-[#e5aa24] bg-[#1e3a2b] text-[#faf7f2] shadow-md" : "border-[#1e3a2b]/30 bg-card text-[#8c5a3c] hover:border-[#e5aa24] hover:text-[#1e3a2b]",
                       )}
                       style={{ transitionDuration: `${base * 0.5}s` }}
                     >
@@ -131,7 +131,7 @@ const ContactUnderlineForm = ({
                 transition={{ duration: slow * 0.5, ease }}
                 className="pt-[0.5rem]"
               >
-                <button type="submit" className="btn-primary w-full lg:w-auto lg:min-w-[15rem]">
+                <button type="submit" className="btn-primary w-full lg:w-auto lg:min-w-[15rem] bg-[#e5aa24] text-[#1c201d] hover:bg-[#1e3a2b] hover:text-[#faf7f2] border border-[#e5aa24]/50 rounded-full font-mono text-xs uppercase tracking-widest font-bold shadow-lg py-3.5">
                   <p className="btn-label">{button.text}</p>
                 </button>
               </motion.div>
