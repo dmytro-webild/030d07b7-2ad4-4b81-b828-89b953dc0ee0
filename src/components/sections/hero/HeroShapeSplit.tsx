@@ -99,15 +99,15 @@ const HeroShapeSplit = ({
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1c201d]/95 via-[#1c201d]/80 to-[#1c201d]/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1c201d] via-transparent to-[#1c201d]/60" />
-          <div className="absolute inset-0 bg-[#1e3a2b]/25 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[#2e5440]/25 mix-blend-overlay" />
         </div>
       )}
 
       <div className="relative min-h-svh overflow-hidden z-10">
         <div className="relative mx-auto flex min-h-svh w-[var(--container)] flex-col pb-[clamp(4rem,12svh,7rem)] pt-[clamp(6.5rem,15svh,10rem)] lg:pt-[clamp(7rem,17svh,10rem)]">
           <div className="relative z-10 flex flex-col items-start lg:w-7/12 lg:pr-[var(--gap)]">
-            <div className="inline-flex items-center gap-[0.5rem] font-mono text-[length:var(--text-label)] uppercase leading-[1.5] bg-[#1e3a2b]/90 text-[#faf7f2] px-4 py-1.5 rounded-full border border-[#e5aa24]/60 shadow-lg font-bold mb-2 backdrop-blur-sm">
-              <span className="size-2 rounded-full bg-[#e5aa24] animate-pulse" />
+            <div className="inline-flex items-center gap-[0.5rem] font-mono text-[length:var(--text-label)] uppercase leading-[1.5] bg-[#2e5440]/90 text-[#faf7f2] px-4 py-1.5 rounded-full border border-[#f4d35e]/60 shadow-lg font-bold mb-2 backdrop-blur-sm">
+              <span className="size-2 rounded-full bg-[#f4d35e] animate-pulse" />
               <p className="sr-only">{tag}</p>
               <div aria-hidden="true" className="flex whitespace-nowrap text-[#faf7f2]">
                 {tagChars.map((char, i) => (
@@ -160,7 +160,7 @@ const HeroShapeSplit = ({
                     initial={reduce ? false : { opacity: 0, y: 16 }}
                     animate={go ? { opacity: 1, y: 0 } : undefined}
                     transition={{ duration: slow, ease, delay: 0.2 }}
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-xs sm:text-sm uppercase tracking-widest font-extrabold shadow-[0_0_30px_rgba(229,170,36,0.5)] hover:bg-[#faf7f2] hover:text-[#1c201d] transition-all duration-300 transform hover:scale-[1.04] border-2 border-[#e5aa24] shrink-0"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#f4d35e] text-[#1c201d] font-mono text-xs sm:text-sm uppercase tracking-widest font-extrabold shadow-[0_0_30px_rgba(244,211,94,0.4)] hover:bg-[#faf7f2] hover:text-[#1c201d] transition-all duration-300 transform hover:scale-[1.04] border-2 border-[#f4d35e] shrink-0"
                   >
                     <svg className="size-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />

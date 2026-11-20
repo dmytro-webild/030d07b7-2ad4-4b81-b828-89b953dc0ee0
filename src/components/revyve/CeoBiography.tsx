@@ -13,8 +13,8 @@ export default function CeoBiography() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col items-start order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-[#faf7f2] bg-[#1e3a2b] border border-[#e5aa24]/50 px-4 py-1.5 rounded-full mb-4 font-bold shadow-md">
-              <span className="size-2 rounded-full bg-[#e5aa24]" />
+            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-[#faf7f2] bg-[#2e5440] border border-[#f4d35e]/50 px-4 py-1.5 rounded-full mb-4 font-bold shadow-md">
+              <span className="size-2 rounded-full bg-[#f4d35e]" />
               <span>Sanctuary Founder & Visionary</span>
             </div>
 
@@ -22,7 +22,7 @@ export default function CeoBiography() {
               Meet the CEO of REVYVE
             </h2>
 
-            <p className="font-serif text-xl sm:text-2xl text-[#8c5a3c] font-bold mb-6">
+            <p className="font-serif text-xl sm:text-2xl text-[#9c6849] font-bold mb-6">
               Julie Brainard — Somatic Yoga Practitioner, Breathwork Guide & Interior Designer
             </p>
 
@@ -39,8 +39,8 @@ export default function CeoBiography() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4 items-center">
-              <div className="flex items-center gap-3 bg-[#1e3a2b] text-[#faf7f2] border border-[#e5aa24]/40 p-3.5 px-5 rounded-2xl shadow-md">
-                <span className="size-3 rounded-full bg-[#e5aa24] shadow-[0_0_10px_rgba(229,170,36,0.8)]" />
+              <div className="flex items-center gap-3 bg-[#2e5440] text-[#faf7f2] border border-[#f4d35e]/40 p-3.5 px-5 rounded-2xl shadow-md">
+                <span className="size-3 rounded-full bg-[#f4d35e] shadow-[0_0_10px_rgba(244,211,94,0.8)]" />
                 <span className="font-mono text-xs uppercase tracking-wider font-semibold">
                   Hocking Hills, Ohio • Somatic & Breathwork Sanctuary
                 </span>

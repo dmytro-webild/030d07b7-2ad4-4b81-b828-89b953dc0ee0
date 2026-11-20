@@ -9,16 +9,16 @@
 
 /* webild:theme-ai */
 :root {
-  --btn-hover: #eef0ea;
-  --primary-cta: #141813; /* Forest Green */
-  --primary-cta-text: #eef0ea;
-  --secondary-cta: #e1e5dc; /* Nature Yellow */
-  --secondary-cta-text: #141813; /* Charcoal */
-  --background-accent: #8c5a3c; /* Warm Brown */
+  --btn-hover: #f0f3ec;
+  --primary-cta: #1d2b21; /* Soft Forest Green */
+  --primary-cta-text: #f5f7f2;
+  --secondary-cta: #f4d35e; /* Brighter Softer Yellow */
+  --secondary-cta-text: #1d2b21; /* Charcoal */
+  --background-accent: #9c6849; /* Soft Warm Brown */
 
-  --background: #eef0ea; /* Organic Cream */
-  --foreground: #141813; /* Deep Charcoal */
-  --card: #e1e5dc; /* Warm Earthy Card */
+  --background: #f5f7f2; /* Organic Cream */
+  --foreground: #1d2b21; /* Deep Soft Charcoal */
+  --card: #e5ece2; /* Warm Earthy Card */
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
@@ -26,23 +26,23 @@
   --primary-foreground: var(--primary-cta-text);
   --secondary: var(--secondary-cta);
   --secondary-foreground: var(--secondary-cta-text);
-  --muted: #e1e5dc;
-  --muted-foreground: #545c52;
-  --accent: #2f5d43; /* Warm Brown */
+  --muted: #e5ece2;
+  --muted-foreground: #5a6e60;
+  --accent: #3d7a57; /* Lighter Softer Green */
   --accent-foreground: #ffffff;
-  --deep: #e7eae2; /* Forest Green */
-  --deep-foreground: #141813;
+  --deep: #e3ebe0; /* Soft Airy Green */
+  --deep-foreground: #1d2b21;
   --destructive: #e5484d;
   --destructive-foreground: #161616;
-  --border: #d1d6ca;
+  --border: #d2ded0;
   --input: #333333;
   --ring: var(--primary-cta);
-  --tint-1: #a8bdaf;
-  --tint-2: #c8d5cb;
-  --tint-3: #dbe3db;
+  --tint-1: #b0c9b8;
+  --tint-2: #cee0d4;
+  --tint-3: #e0eae2;
   --glow: var(--secondary-cta);
   --glass: var(--background);
-  --accent-glass: #2f5d43e8;
+  --accent-glass: #3d7a57e8;
   --model-tone: light;
 
   --font-heading: "Instrument Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -395,16 +395,16 @@
 [data-tone="deep"] {
   --background: var(--deep);
   --foreground: var(--deep-foreground);
-  --card: #e1e5dc;
+  --card: #e5ece2;
   --card-foreground: var(--deep-foreground);
   --primary: var(--deep-foreground);
   --primary-foreground: var(--deep);
-  --secondary: #e5aa24;
-  --secondary-foreground: #1c201d;
-  --muted: #e1e5dc;
-  --muted-foreground: #545c52;
-  --border: #d1d6ca;
-  --input: #4d7560;
+  --secondary: #f4d35e;
+  --secondary-foreground: #1d2b21;
+  --muted: #e5ece2;
+  --muted-foreground: #5a6e60;
+  --border: #d2ded0;
+  --input: #3d7a57;
   --ring: var(--deep-foreground);
   background-color: var(--background);
   color: var(--foreground);

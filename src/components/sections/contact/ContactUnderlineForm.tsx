@@ -112,7 +112,7 @@ const ContactUnderlineForm = ({
                       onClick={() => setActive(i)}
                       className={cn(
                         "min-h-[2.75rem] whitespace-nowrap rounded-full border px-[1.25rem] font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] font-bold transition-all",
-                        active === i ? "border-[#e5aa24] bg-[#1e3a2b] text-[#faf7f2] shadow-md" : "border-[#1e3a2b]/30 bg-card text-[#8c5a3c] hover:border-[#e5aa24] hover:text-[#1e3a2b]",
+                        active === i ? "border-[#f4d35e] bg-[#2e5440] text-[#faf7f2] shadow-md" : "border-[#2e5440]/30 bg-card text-[#9c6849] hover:border-[#f4d35e] hover:text-[#2e5440]",
                       )}
                       style={{ transitionDuration: `${base * 0.5}s` }}
                     >
@@ -131,7 +131,7 @@ const ContactUnderlineForm = ({
                 transition={{ duration: slow * 0.5, ease }}
                 className="pt-[0.5rem]"
               >
-                <button type="submit" className="btn-primary w-full lg:w-auto lg:min-w-[15rem] bg-[#e5aa24] text-[#1c201d] hover:bg-[#1e3a2b] hover:text-[#faf7f2] border border-[#e5aa24]/50 rounded-full font-mono text-xs uppercase tracking-widest font-bold shadow-lg py-3.5">
+                <button type="submit" className="btn-primary w-full lg:w-auto lg:min-w-[15rem] bg-[#f4d35e] text-[#1c201d] hover:bg-[#2e5440] hover:text-[#faf7f2] border border-[#f4d35e]/50 rounded-full font-mono text-xs uppercase tracking-widest font-bold shadow-lg py-3.5">
                   <p className="btn-label">{button.text}</p>
                 </button>
               </motion.div>
