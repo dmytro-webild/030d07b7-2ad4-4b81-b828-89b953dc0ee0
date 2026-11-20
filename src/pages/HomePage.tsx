@@ -44,7 +44,7 @@ export default function HomePage() {
           title="Awaken Your Inner Harmony"
           description="A boutique wellness retreat brand, sanctuary lodging, and event venue led by founder Julie Brainard. Discover somatic yoga, breathwork, and transformational healing in nature."
           primaryButton={{
-            text: "Explore Retreats",
+            text: "Book a Retreat",
             href: "/retreats"
           }}
           secondaryButton={{
