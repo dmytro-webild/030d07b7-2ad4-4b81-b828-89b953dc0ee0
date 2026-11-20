@@ -14,7 +14,7 @@ const offerings: Offering[] = [
     category: "Restorative Journey",
     tag: "01 / HEALING",
     description: "Multi-day immersive experiences blending somatic movement, sound bath therapy, herbal infusions, and deep restorative silence in the tranquility of Hocking Hills.",
-    imageSrc: "https://img.b2bpic.net/free-photo/autumn-forest-reflected-lake_181624-52280.jpg",
+    imageSrc: "https://img.b2bpic.net/free-photo/autumn-forest-reflected-lake_181624-52280.jpg?_wi=1",
   },
   {
     title: "Corporate Wellness",
@@ -28,14 +28,14 @@ const offerings: Offering[] = [
     category: "Sacred Gatherings",
     tag: "03 / WEDDINGS",
     description: "Intimate woodland wedding ceremonies, bridal somatic immersions, and soul-centered celebrations surrounded by old-growth forest views and natural elegance.",
-    imageSrc: "https://img.b2bpic.net/free-photo/nice-leaves-aspen_23-2147829156.jpg",
+    imageSrc: "https://img.b2bpic.net/free-photo/nice-leaves-aspen_23-2147829156.jpg?_wi=1",
   },
   {
     title: "Yoga & Breathwork",
     category: "Somatic Practice",
     tag: "04 / YOGA & BREATH",
     description: "Guided somatic movement flows and transformational pranayama breathwork led by founder Julie Brainard, designed to release stored trauma and restore vitality.",
-    imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg",
+    imageSrc: "https://img.b2bpic.net/free-photo/dark-forest-trees_395237-133.jpg?_wi=1",
   },
   {
     title: "Forest Therapy",
