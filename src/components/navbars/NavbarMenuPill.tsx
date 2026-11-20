@@ -35,6 +35,7 @@ const NavbarMenuPill = ({
 }: NavbarMenuPillProps) => {
   const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const hidden = useRef(false);
   const y = useMotionValue("0%");
@@ -42,6 +43,7 @@ const NavbarMenuPill = ({
   useMenuDialog(open, panelRef, () => setOpen(false));
 
   useMotionValueEvent(scrollY, "change", (v) => {
+    setIsScrolled(v > 40);
     const prev = scrollY.getPrevious() ?? 0;
     const hide = v > 120 && v > prev;
     if (hide === hidden.current) return;
@@ -56,18 +58,57 @@ const NavbarMenuPill = ({
         style={{ y: open ? "0%" : y }}
         className={`fixed inset-x-0 top-0 flex items-center justify-between py-[1.25rem] pl-[0.75rem] pr-[1.25rem] text-foreground lg:pl-[1.5rem] ${open ? "z-[56]" : "z-50"}`}
       >
-        <a href="/" className="flex min-w-0 items-center gap-[0.625rem] group">
-          <CloverLogo className="size-8 text-secondary shrink-0 transition-transform duration-300 group-hover:scale-110" />
-          <div className="flex flex-col items-start leading-none">
-            <p className="truncate font-serif text-[length:var(--text-body-lg)] font-medium tracking-tight text-foreground">{brand}</p>
-            {mark ? <p className="text-[length:var(--text-label)] text-accent">{mark}</p> : <span className="text-[0.65rem] font-mono tracking-widest text-muted-foreground uppercase">Sanctuary</span>}
+        <a href="/" className="flex min-w-0 items-center gap-[0.75rem] group bg-[#1c201d]/85 backdrop-blur-md px-3.5 py-2 rounded-full border border-[#1e3a2b]/60 shadow-lg transition-all duration-300 hover:border-[#e5aa24]/60">
+          <div className="relative size-8 shrink-0 flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              {isScrolled ? (
+                <motion.div
+                  key="star-logo"
+                  initial={{ opacity: 0, scale: 0.7, rotate: -60 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  exit={{ opacity: 0, scale: 0.7, rotate: 60 }}
+                  transition={{ duration: 0.35, ease: EXPO_OUT }}
+                  className="relative size-8 rounded-full overflow-hidden border border-[#e5aa24]/70 shadow-[0_0_12px_rgba(229,170,36,0.35)]"
+                >
+                  <img
+                    src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
+                    alt="REVYVE Black Spinning Star Sri Yantra Logo"
+                    className="size-full object-cover animate-[spin_10s_linear_infinite]"
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="clover-logo"
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.7 }}
+                  transition={{ duration: 0.35, ease: EXPO_OUT }}
+                >
+                  <CloverLogo className="size-8 text-[#e5aa24] shrink-0 transition-transform duration-300 group-hover:scale-110 filter drop-shadow-[0_2px_8px_rgba(229,170,36,0.5)]" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="flex flex-col items-start leading-none pr-1">
+            <div className="flex items-center gap-1.5">
+              <p className="truncate font-serif text-[length:var(--text-body-lg)] font-bold tracking-tight text-[#faf7f2]">{brand}</p>
+              <span className="inline-block size-1.5 rounded-full bg-[#e5aa24]" />
+            </div>
+            {mark ? (
+              <p className="text-[length:var(--text-label)] text-[#e5aa24] font-semibold">{mark}</p>
+            ) : (
+              <span className="text-[0.65rem] font-mono tracking-widest text-[#8c5a3c] font-semibold uppercase">
+                {isScrolled ? "Sri Yantra Star" : "Clover Sanctuary"}
+              </span>
+            )}
           </div>
         </a>
 
         <div className="flex items-center gap-3">
           <a
             href={contact?.href || "/retreats"}
-            className="hidden sm:inline-flex items-center justify-center min-h-[2.5rem] px-5 rounded-full bg-accent text-accent-foreground font-mono text-[0.7rem] font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-foreground hover:text-background shadow-sm"
+            className="hidden sm:inline-flex items-center justify-center min-h-[2.5rem] px-5 rounded-full bg-[#e5aa24] text-[#1c201d] font-mono text-[0.7rem] font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1e3a2b] hover:text-[#faf7f2] shadow-md border border-[#e5aa24]/40"
           >
             {contact?.text || "Book a Retreat"}
           </a>
@@ -77,13 +118,13 @@ const NavbarMenuPill = ({
             aria-expanded={open}
             aria-label={open ? closeText : menuText}
             onClick={() => setOpen((value) => !value)}
-            className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-foreground/30 px-[1.0625rem] bg-background/80 backdrop-blur-md transition-colors duration-300 hover:bg-foreground hover:text-background"
+            className="flex h-[2.75rem] shrink-0 items-center justify-center gap-[0.5625rem] rounded-full border border-[#e5aa24]/40 px-[1.0625rem] bg-[#1e3a2b]/90 text-[#faf7f2] backdrop-blur-md transition-colors duration-300 hover:bg-[#8c5a3c] hover:text-[#faf7f2] shadow-md"
           >
-            <div aria-hidden="true" className="grid font-mono text-[length:var(--text-label)] uppercase leading-none">
+            <div aria-hidden="true" className="grid font-mono text-[length:var(--text-label)] uppercase leading-none font-semibold">
               <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`}>{menuText}</p>
               <p className={`col-start-1 row-start-1 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>{closeText}</p>
             </div>
-            <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem]">
+            <div aria-hidden="true" className="relative h-[0.5rem] w-[1.125rem] text-[#e5aa24]">
               <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 rotate-45" : "top-0"}`} />
               <div className={`absolute left-0 h-px w-full bg-current transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${open ? "top-1/2 -rotate-45" : "bottom-0"}`} />
             </div>

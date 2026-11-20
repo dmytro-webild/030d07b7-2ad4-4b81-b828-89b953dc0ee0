@@ -13,21 +13,22 @@ export default function CeoBiography() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col items-start order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-muted-foreground bg-card border border-border px-3 py-1 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-widest text-[#faf7f2] bg-[#1e3a2b] border border-[#e5aa24]/50 px-4 py-1.5 rounded-full mb-4 font-bold shadow-md">
+              <span className="size-2 rounded-full bg-[#e5aa24]" />
               <span>Sanctuary Founder & Visionary</span>
             </div>
 
-            <h2 className="font-serif text-[length:var(--text-h2)] leading-none tracking-tight mb-3">
+            <h2 className="font-serif text-[length:var(--text-h2)] leading-none tracking-tight mb-3 text-[#1c201d]">
               Meet the CEO of REVYVE
             </h2>
 
-            <p className="font-serif text-xl sm:text-2xl text-accent font-medium mb-6">
+            <p className="font-serif text-xl sm:text-2xl text-[#8c5a3c] font-bold mb-6">
               Julie Brainard — Somatic Yoga Practitioner, Breathwork Guide & Interior Designer
             </p>
 
-            <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-4">
+            <div className="prose prose-lg text-[#555f58] leading-relaxed space-y-4">
               <p className="text-base sm:text-lg">
-                Meet <strong className="text-foreground">Julie Brainard</strong>, the compassionate visionary and heart-centered soul behind REVYVE Retreat Center.
+                Meet <strong className="text-[#1c201d]">Julie Brainard</strong>, the compassionate visionary and heart-centered soul behind REVYVE Retreat Center.
               </p>
               <p className="text-base sm:text-lg">
                 Julie's life has been a mosaic of unexpected transformative experiences that sparked a profound realization—humanity yearns for a place to mend, rejuvenate, and rediscover the inherent harmony within.
@@ -38,9 +39,9 @@ export default function CeoBiography() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4 items-center">
-              <div className="flex items-center gap-3 bg-card/80 border border-border p-3 rounded-2xl">
-                <span className="size-3 rounded-full bg-accent" />
-                <span className="font-mono text-xs uppercase tracking-wider text-foreground">
+              <div className="flex items-center gap-3 bg-[#1e3a2b] text-[#faf7f2] border border-[#e5aa24]/40 p-3.5 px-5 rounded-2xl shadow-md">
+                <span className="size-3 rounded-full bg-[#e5aa24] shadow-[0_0_10px_rgba(229,170,36,0.8)]" />
+                <span className="font-mono text-xs uppercase tracking-wider font-semibold">
                   Hocking Hills, Ohio • Somatic & Breathwork Sanctuary
                 </span>
               </div>
