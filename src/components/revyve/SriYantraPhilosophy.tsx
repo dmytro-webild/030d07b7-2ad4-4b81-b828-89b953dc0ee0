@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import CloverLogo from "@/components/ui/CloverLogo";
 
 export default function SriYantraPhilosophy() {
   return (
@@ -10,7 +9,7 @@ export default function SriYantraPhilosophy() {
 
       <div className="relative z-10 mx-auto w-[var(--container)]">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-          {/* dual Logo Showcase: Yellow Clover & Black Spinning Star */}
+          {/* Logo Showcase: Sri Yantra Emblem */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -21,34 +20,21 @@ export default function SriYantraPhilosophy() {
             <div className="relative group p-8 sm:p-12 rounded-3xl bg-gradient-to-tr from-[#1e3a2b]/90 via-[#8c5a3c]/40 to-[#1c201d] border border-[#e5aa24]/40 shadow-2xl flex flex-col items-center justify-center w-full">
               <div className="absolute inset-0 rounded-3xl bg-[#e5aa24]/10 blur-2xl group-hover:bg-[#e5aa24]/20 transition-all duration-700" />
 
-              <div className="relative z-10 flex items-center justify-center gap-6 sm:gap-8 my-4">
-                {/* Primary Yellow Four-Leaf Clover */}
-                <div className="flex flex-col items-center gap-2 group/clover">
-                  <div className="p-4 rounded-full bg-[#1c201d]/90 border border-[#e5aa24]/50 shadow-[0_0_20px_rgba(229,170,36,0.3)] transition-transform duration-500 group-hover/clover:scale-110">
-                    <CloverLogo className="size-24 sm:size-28 text-[#e5aa24] filter drop-shadow-[0_2px_12px_rgba(229,170,36,0.6)]" />
-                  </div>
-                  <span className="font-mono text-[0.65rem] uppercase tracking-widest text-[#e5aa24] font-bold bg-[#e5aa24]/10 px-3 py-1 rounded-full border border-[#e5aa24]/30">
-                    Primary Logo
-                  </span>
+              <div className="relative z-10 flex flex-col items-center justify-center gap-4 my-4">
+                <div className="relative size-36 sm:size-44 rounded-full overflow-hidden border-2 border-[#e5aa24]/70 shadow-[0_0_30px_rgba(229,170,36,0.4)] transition-transform duration-500 group-hover:scale-105">
+                  <img
+                    src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
+                    alt="REVYVE Sri Yantra Sacred Geometry Logo"
+                    className="size-full object-cover animate-[spin_16s_linear_infinite]"
+                  />
                 </div>
-
-                {/* Spinning Black Star Sri Yantra Logo */}
-                <div className="flex flex-col items-center gap-2 group/star">
-                  <div className="relative size-28 sm:size-32 rounded-full overflow-hidden border-2 border-[#e5aa24]/70 shadow-[0_0_24px_rgba(229,170,36,0.4)] transition-transform duration-500 group-hover/star:scale-110">
-                    <img
-                      src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
-                      alt="REVYVE Black Spinning Star Sri Yantra Logo"
-                      className="size-full object-cover animate-[spin_12s_linear_infinite]"
-                    />
-                  </div>
-                  <span className="font-mono text-[0.65rem] uppercase tracking-widest text-[#faf7f2] font-bold bg-[#1e3a2b] px-3 py-1 rounded-full border border-[#1e3a2b]">
-                    Scroll Logo
-                  </span>
-                </div>
+                <span className="font-mono text-[0.7rem] uppercase tracking-widest text-[#e5aa24] font-bold bg-[#1c201d]/90 px-4 py-1.5 rounded-full border border-[#e5aa24]/40 shadow-md">
+                  Sri Yantra Sacred Logo
+                </span>
               </div>
 
               <p className="relative z-10 font-mono text-xs text-[#d2c7b5] text-center mt-2 uppercase tracking-wider">
-                Twin Sacred Emblems • Hocking Hills, OH
+                Sacred Geometric Emblem • Hocking Hills, OH
               </p>
             </div>
           </motion.div>
@@ -66,18 +52,18 @@ export default function SriYantraPhilosophy() {
             </div>
 
             <h2 className="font-serif text-[length:var(--text-h2)] leading-tight tracking-tight mb-6 text-[#faf7f2]">
-              The Four-Leaf Clover & Sacred Star Philosophy
+              The Sacred Sri Yantra Philosophy
             </h2>
 
             <div className="prose prose-lg text-[#d2c7b5] leading-relaxed space-y-4">
               <p className="text-base sm:text-lg">
-                At <strong className="text-[#e5aa24] font-serif">REVYVE</strong>, our philosophy is birthed from our emblem of the <strong className="text-[#faf7f2]">Yellow Four-Leaf Clover & Black Sri Yantra Star</strong>. It is deeply rooted in ancient spiritual geometry and natural alignment.
+                At <strong className="text-[#e5aa24] font-serif">REVYVE</strong>, our philosophy is birthed from our logo of the <strong className="text-[#faf7f2]">Sri Yantra</strong>. It is deeply rooted in its profound spiritual symbolism. Derived from ancient Hindu and Vedic traditions, the Sri Yantra is a sacred geometric pattern believed to harbor immense spiritual power.
               </p>
               <p className="text-base sm:text-lg">
-                As the embodiment of divine energy, renewal, and fortune, the yellow four-leaf clover represents the balance of mind, body, spirit, and nature. As you scroll through our sanctuary, the black spinning star logo serves as a constant reminder of cosmic alignment and inner centeredness.
+                As the embodiment of divine energy, it is thought to usher in good health, prosperity, and success. The intricate design, representing the alignment of nine planets, holds the key to unlocking balance and harmony in one's life.
               </p>
               <p className="text-base sm:text-lg">
-                At the core of our retreat center lies the mission to enhance personal power and invite abundance across all facets of life. Together, our sacred emblems guide our commitment to creating a sanctuary for holistic well-being, rest, and transformational healing.
+                At the core of our retreat center's philosophy lies in enhancing personal power and inviting good fortune and success across all facets of life. The Sri Yantra serves as a guiding symbol, aligning with our commitment to create a space where individuals can experience holistic well-being, abundance, and transformative energy.
               </p>
             </div>
 

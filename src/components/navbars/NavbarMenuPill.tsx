@@ -4,8 +4,6 @@ import { useRef, useState } from "react";
 import { AnimatePresence, animate, motion, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import useMenuDialog from "@/components/kit/useMenuDialog";
 
-import CloverLogo from "@/components/ui/CloverLogo";
-
 type NavItem = { name: string; href: string };
 
 type NavbarMenuPillProps = {
@@ -35,7 +33,6 @@ const NavbarMenuPill = ({
 }: NavbarMenuPillProps) => {
   const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const hidden = useRef(false);
   const y = useMotionValue("0%");
@@ -43,7 +40,6 @@ const NavbarMenuPill = ({
   useMenuDialog(open, panelRef, () => setOpen(false));
 
   useMotionValueEvent(scrollY, "change", (v) => {
-    setIsScrolled(v > 40);
     const prev = scrollY.getPrevious() ?? 0;
     const hide = v > 120 && v > prev;
     if (hide === hidden.current) return;
@@ -60,34 +56,13 @@ const NavbarMenuPill = ({
       >
         <a href="/" className="flex min-w-0 items-center gap-[0.75rem] group bg-[#1c201d]/85 backdrop-blur-md px-3.5 py-2 rounded-full border border-[#1e3a2b]/60 shadow-lg transition-all duration-300 hover:border-[#e5aa24]/60">
           <div className="relative size-8 shrink-0 flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              {isScrolled ? (
-                <motion.div
-                  key="star-logo"
-                  initial={{ opacity: 0, scale: 0.7, rotate: -60 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                  exit={{ opacity: 0, scale: 0.7, rotate: 60 }}
-                  transition={{ duration: 0.35, ease: EXPO_OUT }}
-                  className="relative size-8 rounded-full overflow-hidden border border-[#e5aa24]/70 shadow-[0_0_12px_rgba(229,170,36,0.35)]"
-                >
-                  <img
-                    src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
-                    alt="REVYVE Black Spinning Star Sri Yantra Logo"
-                    className="size-full object-cover animate-[spin_10s_linear_infinite]"
-                  />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="clover-logo"
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.7 }}
-                  transition={{ duration: 0.35, ease: EXPO_OUT }}
-                >
-                  <CloverLogo className="size-8 text-[#e5aa24] shrink-0 transition-transform duration-300 group-hover:scale-110 filter drop-shadow-[0_2px_8px_rgba(229,170,36,0.5)]" />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <div className="relative size-8 rounded-full overflow-hidden border border-[#e5aa24]/70 shadow-[0_0_12px_rgba(229,170,36,0.35)] transition-transform duration-300 group-hover:scale-110">
+              <img
+                src="https://storage.googleapis.com/webild/users/user_3MHUulfpl4c0IR72KBuyVPRP4VJ/uploaded-1795146930469-sovebs4e.webp"
+                alt="REVYVE Sri Yantra Logo"
+                className="size-full object-cover animate-[spin_12s_linear_infinite]"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col items-start leading-none pr-1">
@@ -99,7 +74,7 @@ const NavbarMenuPill = ({
               <p className="text-[length:var(--text-label)] text-[#e5aa24] font-semibold">{mark}</p>
             ) : (
               <span className="text-[0.65rem] font-mono tracking-widest text-[#8c5a3c] font-semibold uppercase">
-                {isScrolled ? "Sri Yantra Star" : "Clover Sanctuary"}
+                Sri Yantra Sanctuary
               </span>
             )}
           </div>
